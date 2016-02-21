@@ -2,6 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import mysql.connector
+  #from recaptcha import verify
+  ## recaptcha_client = recaptcha.client('6LfqyRgTAAAAAEMw_phaQfPjZbLRgnvuk2wkUGWE', '6LfqyRgTAAAAAMdZM4AwZCOoJPuE3DOaZ7SQJnb5')
 
 app = Flask(__name__)
  
@@ -11,6 +13,13 @@ def login():
         email = request.form['email'] 
         password = request.form['password'] 
         state = saveToDB(email, password)
+       
+        # private_key = "6LfqyRgTAAAAAEMw_phaQfPjZbLRgnvuk2wkUGWE"
+        # remote_ip = request.META['REMOTE_ADDR']
+        # challenge = request.POST.get('recaptcha_challenge_field', '')
+        # response = request.POST.get('recaptcha_response_field', '')
+
+        # result = verify(private_key, remote_ip, challenge, response)  
         
         return render_template('afterlogin.html', data = 'Good:)) Your email: ' + email + ', password: ' + password + ", state: " + state)
     
