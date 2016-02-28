@@ -12,43 +12,6 @@ h1{
   margin: 2em auto 0px;
 }
 
-.outer-screen{
-  background: #13202c;
-  width: 900px;
-  height: 540px;
-  margin: 50px auto;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  position: relative;
-  padding-top: 35px;
-}
-
-.outer-screen:before{
-  content: "";
-  background: #3e4a53;
-  border-radius: 50px;
-  position: absolute;
-  bottom: 20px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
-  z-index: 9999;
-  width: 50px;
-  height: 50px;
-}
-.outer-screen:after{
-  content: "";
-  background: #ecf0f1;
-  width: 900px;
-  height: 88px;
-  position: absolute;
-  bottom: 0px;
-  border-radius: 0px 0px 20px 20px;
-  -moz-border-radius: 0px 0px 20px 20px;
-  -webkit-border-radius: 0px 0px 20px 20px;
-}
-
 .stand{
   position: relative;  
 }
